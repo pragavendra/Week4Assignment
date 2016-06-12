@@ -31,6 +31,11 @@ class ComposeViewController: UIViewController {
     }
     
     @IBAction func onTapButton(sender: AnyObject) {
+        UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [], animations: { () -> Void in
+                self.buttonView.transform = CGAffineTransformMakeTranslation(0, -1200)
+            }, completion: nil)
         dismissViewControllerAnimated(true, completion: nil)
         
     }
@@ -79,7 +84,7 @@ class ComposeViewController: UIViewController {
     buttons[2].transform = CGAffineTransformIdentity
     buttons[3].transform = CGAffineTransformIdentity
     buttons[4].transform = CGAffineTransformIdentity
-    buttonView.transform = CGAffineTransformIdentity
+    //buttonView.transform = CGAffineTransformIdentity
     }
 
     /*
