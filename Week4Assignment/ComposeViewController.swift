@@ -15,6 +15,10 @@ class ComposeViewController: UIViewController {
     
     @IBOutlet weak var buttonView: UIView!
     
+    @IBOutlet weak var textcomposeButton: UIButton!
+    
+    @IBOutlet var buttons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,9 +41,45 @@ class ComposeViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         
-    // buttonView.transform = CGAffineTransformMakeTranslation(0, 0)
+    buttonView.transform = CGAffineTransformMakeTranslation(0, 0)
+    UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [], animations: { () -> Void in
+                    self.textcomposeButton.transform = CGAffineTransformMakeTranslation(100, -240)
+            }, completion: nil)
         
-        //buttonView.transform = CGAffineTransformIdentity
+        UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [], animations: { () -> Void in
+                self.buttons[0].transform = CGAffineTransformMakeTranslation(-200, 300)
+            }, completion: nil)
+        UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [], animations: { () -> Void in
+                self.buttons[1].transform = CGAffineTransformMakeTranslation(-330, 60)
+            }, completion: nil)
+        UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [], animations: { () -> Void in
+                self.buttons[2].transform = CGAffineTransformMakeTranslation(400, -200)
+            }, completion: nil)
+        UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [], animations: { () -> Void in
+                self.buttons[3].transform = CGAffineTransformMakeTranslation(-340, 250)
+            }, completion: nil)
+        UIView.animateWithDuration(0.8, delay: 0.0,
+            // Autoreverse runs the animation backwards and Repeat cycles the animation indefinitely.
+            options: [], animations: { () -> Void in
+                self.buttons[4].transform = CGAffineTransformMakeTranslation(-250, -330)
+            }, completion: nil)
+    textcomposeButton.transform = CGAffineTransformIdentity
+    buttons[0].transform = CGAffineTransformIdentity
+    buttons[1].transform = CGAffineTransformIdentity
+    buttons[2].transform = CGAffineTransformIdentity
+    buttons[3].transform = CGAffineTransformIdentity
+    buttons[4].transform = CGAffineTransformIdentity
+    buttonView.transform = CGAffineTransformIdentity
     }
 
     /*

@@ -22,23 +22,22 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="home_selected_icon"/>
                                         <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdq-qg-TCC"/>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izf-KK-HXy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rzD-VY-pKB">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rzD-VY-pKB">
                                         <rect key="frame" x="206" y="3" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="account_selected_icon"/>
                                         <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRU-70-yh5"/>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNZ-bZ-FkG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kQc-UX-36n">
+                                    <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kQc-UX-36n">
                                         <rect key="frame" x="135" y="3" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="compose_button"/>
                                         <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGw-Yd-386"/>
                                             <segue destination="ojB-qu-MkL" kind="modal" id="hNV-7O-qcF"/>
                                         </connections>
                                     </button>
@@ -47,15 +46,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="search_selected_icon"/>
                                         <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1K-PL-l8N"/>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JiF-hZ-8ch"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A0g-3C-qhn">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A0g-3C-qhn">
                                         <rect key="frame" x="277" y="3" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="trending_selected_icon"/>
                                         <connections>
-                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ArH-1w-XCJ"/>
+                                            <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEA-Eb-18u"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,11 +70,10 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="AMD-Qd-DgO" id="zyi-Of-EQq"/>
-                        <outletCollection property="buttons" destination="wGZ-Bn-yW7" collectionClass="NSMutableArray" id="Xmq-Xe-aXc"/>
-                        <outletCollection property="buttons" destination="cTK-JU-gpe" collectionClass="NSMutableArray" id="1sA-KH-Jn0"/>
-                        <outletCollection property="buttons" destination="kQc-UX-36n" collectionClass="NSMutableArray" id="P6b-HJ-RF8"/>
-                        <outletCollection property="buttons" destination="rzD-VY-pKB" collectionClass="NSMutableArray" id="Ikx-Je-OvF"/>
-                        <outletCollection property="buttons" destination="A0g-3C-qhn" collectionClass="NSMutableArray" id="52D-De-YUH"/>
+                        <outletCollection property="buttons" destination="wGZ-Bn-yW7" collectionClass="NSMutableArray" id="S5T-jx-nAM"/>
+                        <outletCollection property="buttons" destination="cTK-JU-gpe" collectionClass="NSMutableArray" id="iTs-7g-oB1"/>
+                        <outletCollection property="buttons" destination="rzD-VY-pKB" collectionClass="NSMutableArray" id="BBQ-I3-ZLn"/>
+                        <outletCollection property="buttons" destination="A0g-3C-qhn" collectionClass="NSMutableArray" id="GVL-Uh-Tsc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,10 +92,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="528"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_spinner" id="ssm-ff-f3U">
-                                <rect key="frame" x="5" y="193" width="303" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_overlay" id="fNI-z9-Kc3">
                                 <rect key="frame" x="0.0" y="324" width="315" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,6 +103,10 @@
                                     <segue destination="FNm-9D-Dah" kind="modal" id="eQi-uv-sPX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_spinner" id="ssm-ff-f3U">
+                                <rect key="frame" x="5" y="176" width="303" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -202,34 +200,34 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1FL-zA-adn">
-                                        <rect key="frame" x="8" y="16" width="75" height="89"/>
+                                        <rect key="frame" x="16" y="16" width="75" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="text_icon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sRd-j6-BaI">
-                                        <rect key="frame" x="220" y="20" width="75" height="96"/>
+                                        <rect key="frame" x="230" y="16" width="75" height="96"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="quote_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i6n-eT-HmP">
-                                        <rect key="frame" x="8" y="113" width="75" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="link_icon"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xe3-dQ-Qbb">
-                                        <rect key="frame" x="112" y="13" width="75" height="95"/>
+                                        <rect key="frame" x="131" y="13" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="chat_icon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Txt-bN-6To">
-                                        <rect key="frame" x="117" y="115" width="75" height="95"/>
+                                        <rect key="frame" x="131" y="115" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="photo_icon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F0z-3y-naK">
-                                        <rect key="frame" x="220" y="115" width="75" height="95"/>
+                                        <rect key="frame" x="224" y="115" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="video_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i6n-eT-HmP">
+                                        <rect key="frame" x="16" y="115" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="link_icon"/>
                                     </button>
                                 </subviews>
                             </view>
@@ -247,6 +245,12 @@
                     <connections>
                         <outlet property="buttonAction" destination="pGo-Uo-u0M" id="ZOh-8n-DWc"/>
                         <outlet property="buttonView" destination="siM-hi-u3c" id="XKh-Gk-dn4"/>
+                        <outlet property="textcomposeButton" destination="1FL-zA-adn" id="A39-wq-mqu"/>
+                        <outletCollection property="buttons" destination="Xe3-dQ-Qbb" collectionClass="NSMutableArray" id="9uN-A0-5hH"/>
+                        <outletCollection property="buttons" destination="sRd-j6-BaI" collectionClass="NSMutableArray" id="puS-as-sUQ"/>
+                        <outletCollection property="buttons" destination="i6n-eT-HmP" collectionClass="NSMutableArray" id="Xw6-Mq-z9g"/>
+                        <outletCollection property="buttons" destination="Txt-bN-6To" collectionClass="NSMutableArray" id="9bl-P9-pWD"/>
+                        <outletCollection property="buttons" destination="F0z-3y-naK" collectionClass="NSMutableArray" id="a95-Ul-76l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKm-ys-aXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
