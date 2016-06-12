@@ -19,6 +19,7 @@
 		0531DFD01D0C7F5B007FB16B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DFCF1D0C7F5B007FB16B /* SearchViewController.swift */; };
 		0531DFD21D0C7F87007FB16B /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DFD11D0C7F87007FB16B /* ComposeViewController.swift */; };
 		0531DFD41D0C7FA5007FB16B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DFD31D0C7FA5007FB16B /* AccountViewController.swift */; };
+		0531DFD61D0CBCB7007FB16B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0531DFD51D0CBCB7007FB16B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0531DFCF1D0C7F5B007FB16B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0531DFD11D0C7F87007FB16B /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		0531DFD31D0C7FA5007FB16B /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		0531DFD51D0CBCB7007FB16B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				0531DFCB1D0C0C4B007FB16B /* CustomTabViewController.swift */,
 				0531DFCD1D0C7E5A007FB16B /* TrendingViewController.swift */,
 				0531DFCF1D0C7F5B007FB16B /* SearchViewController.swift */,
+				0531DFD51D0CBCB7007FB16B /* LoginViewController.swift */,
 			);
 			name = CustomViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				0531DF9C1D0C074B007FB16B /* ViewController.swift in Sources */,
 				0531DFD41D0C7FA5007FB16B /* AccountViewController.swift in Sources */,
 				0531DFCE1D0C7E5A007FB16B /* TrendingViewController.swift in Sources */,
+				0531DFD61D0CBCB7007FB16B /* LoginViewController.swift in Sources */,
 				0531DFD21D0C7F87007FB16B /* ComposeViewController.swift in Sources */,
 				0531DFCC1D0C0C4B007FB16B /* CustomTabViewController.swift in Sources */,
 				0531DF9A1D0C074B007FB16B /* AppDelegate.swift in Sources */,

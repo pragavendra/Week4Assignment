@@ -39,6 +39,7 @@
                                         <state key="normal" backgroundImage="compose_button"/>
                                         <connections>
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGw-Yd-386"/>
+                                            <segue destination="ojB-qu-MkL" kind="modal" id="hNV-7O-qcF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cTK-JU-gpe">
@@ -101,6 +102,13 @@
                                 <rect key="frame" x="0.0" y="324" width="315" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0R3-vk-ff0">
+                                <rect key="frame" x="260" y="20" width="48" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="FNm-9D-Dah" kind="modal" id="eQi-uv-sPX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -108,6 +116,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLQ-fh-WGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-555" y="1057"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="URc-Jy-kbA">
+            <objects>
+                <viewController id="FNm-9D-Dah" customClass="LoginViewController" customModule="Week4Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4dg-X4-fMR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_form" id="Ylu-Sa-ToS">
+                                <rect key="frame" x="0.0" y="-8" width="320" height="576"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eGp-wN-mvM" appends="YES" id="IHz-KT-XHE"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5S2-g4-7Ic">
+                                <rect key="frame" x="6" y="307" width="149" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onPushButton:" destination="FNm-9D-Dah" eventType="touchUpInside" id="LjM-eu-w31"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Rwz-x2-qgE">
+                                <rect key="frame" x="78" y="219" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="TDB-hD-DgI">
+                                <rect key="frame" x="101" y="265" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="5S2-g4-7Ic" id="1DZ-vb-RYT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZ3-JI-MGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eGp-wN-mvM">
+                    <connections>
+                        <action selector="onTap:" destination="FNm-9D-Dah" id="KJg-fv-GMk"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-573" y="1888"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="46g-4q-c46">
@@ -132,56 +192,66 @@
         <!--Compose View Controller-->
         <scene sceneID="nKV-eM-POd">
             <objects>
-                <viewController storyboardIdentifier="ComposeViewController" id="ojB-qu-MkL" userLabel="Compose View Controller" customClass="ComposeViewController" customModule="Week4Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComposeViewController" modalPresentationStyle="overCurrentContext" id="ojB-qu-MkL" userLabel="Compose View Controller" customClass="ComposeViewController" customModule="Week4Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="gHp-OZ-Gon">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1FL-zA-adn">
-                                <rect key="frame" x="25" y="141" width="75" height="89"/>
+                            <view contentMode="scaleToFill" id="siM-hi-u3c">
+                                <rect key="frame" x="0.0" y="135" width="320" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="text_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Txt-bN-6To">
-                                <rect key="frame" x="123" y="135" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="photo_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sRd-j6-BaI">
-                                <rect key="frame" x="210" y="141" width="75" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="quote_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i6n-eT-HmP">
-                                <rect key="frame" x="25" y="244" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="link_icon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F0z-3y-naK">
-                                <rect key="frame" x="223" y="239" width="59" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xe3-dQ-Qbb">
-                                <rect key="frame" x="115" y="244" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="chat_icon"/>
-                            </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="video_icon" id="qPE-9E-UCt">
-                                <rect key="frame" x="215" y="244" width="75" height="95"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1FL-zA-adn">
+                                        <rect key="frame" x="8" y="16" width="75" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="text_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sRd-j6-BaI">
+                                        <rect key="frame" x="220" y="20" width="75" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="quote_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i6n-eT-HmP">
+                                        <rect key="frame" x="8" y="113" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="link_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xe3-dQ-Qbb">
+                                        <rect key="frame" x="112" y="13" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="chat_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Txt-bN-6To">
+                                        <rect key="frame" x="117" y="115" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="photo_icon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F0z-3y-naK">
+                                        <rect key="frame" x="220" y="115" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="video_icon"/>
+                                    </button>
+                                </subviews>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pGo-Uo-u0M">
-                                <rect key="frame" x="0.0" y="437" width="320" height="53"/>
+                                <rect key="frame" x="0.0" y="441" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="nevermind"/>
+                                <connections>
+                                    <action selector="onTapButton:" destination="ojB-qu-MkL" eventType="touchUpInside" id="Z5N-XE-wKx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.22352941179999999" green="0.34509803919999998" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonAction" destination="pGo-Uo-u0M" id="ZOh-8n-DWc"/>
+                        <outlet property="buttonView" destination="siM-hi-u3c" id="XKh-Gk-dn4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKm-ys-aXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="211" y="1059"/>
+            <point key="canvasLocation" x="206" y="1162"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="mkm-4L-PBi">
@@ -244,6 +314,7 @@
         <image name="home_selected_icon" width="35" height="35"/>
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>

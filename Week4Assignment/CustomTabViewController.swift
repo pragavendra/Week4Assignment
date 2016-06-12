@@ -34,9 +34,10 @@ class CustimTabViewController: UIViewController {
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController")
         
         viewControllers = [homeViewController, searchViewController, composeViewController, accountViewController, trendingViewController]
+        //viewControllers = [homeViewController, searchViewController, accountViewController, trendingViewController]
         
-        //buttons[selectedIndex].selected = true
-        //didPressTab(buttons[selectedIndex])
+        buttons[selectedIndex].selected = true
+        didPressTab(buttons[selectedIndex])
         
     }
 
@@ -49,6 +50,7 @@ class CustimTabViewController: UIViewController {
     @IBAction func didPressTab(sender: UIButton) {
         let previousIndex = selectedIndex
          selectedIndex = sender.tag
+        print("selcetedindex:", selectedIndex)
         
         buttons[previousIndex].selected = false
         let previousVC = viewControllers[previousIndex]
@@ -64,6 +66,7 @@ class CustimTabViewController: UIViewController {
         vc.view.frame = contentView.bounds
         contentView.addSubview(vc.view)
         vc.didMoveToParentViewController(self)
+
     }
     /*
     // MARK: - Navigation
