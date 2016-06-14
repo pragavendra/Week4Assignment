@@ -18,6 +18,7 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var textcomposeButton: UIButton!
     
     @IBOutlet var buttons: [UIButton]!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class ComposeViewController: UIViewController {
             options: [], animations: { () -> Void in
                 self.buttonView.transform = CGAffineTransformMakeTranslation(0, -1200)
             }, completion: nil)
+
         dismissViewControllerAnimated(true, completion: nil)
         
     }
@@ -84,7 +86,7 @@ class ComposeViewController: UIViewController {
     buttons[2].transform = CGAffineTransformIdentity
     buttons[3].transform = CGAffineTransformIdentity
     buttons[4].transform = CGAffineTransformIdentity
-    //buttonView.transform = CGAffineTransformIdentity
+    buttonView.transform = CGAffineTransformIdentity
     }
 
     /*
